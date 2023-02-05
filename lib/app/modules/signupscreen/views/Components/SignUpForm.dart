@@ -7,7 +7,7 @@ import '../../../loginscreen/views/loginscreen_view.dart';
 
 
 class SignUpForm  extends StatelessWidget {
-  const SignUpForm ({Key? key}) : super(key: key);
+   SignUpForm ({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class SignUpForm  extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: defaultPadding),
+            padding:  EdgeInsets.symmetric(vertical: defaultPadding),
             child: TextFormField(
               textInputAction: TextInputAction.done,
               obscureText: true,
@@ -36,18 +36,18 @@ class SignUpForm  extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: "Your password",
                 prefixIcon: Padding(
-                  padding: const EdgeInsets.all(defaultPadding),
+                  padding:  EdgeInsets.all(defaultPadding),
                   child: Icon(Icons.lock),
                 ),
               ),
             ),
           ),
-          const SizedBox(height: defaultPadding / 2),
+           SizedBox(height: defaultPadding / 2),
           ElevatedButton(
             onPressed: () {},
             child: Text("Sign Up".toUpperCase()),
           ),
-          const SizedBox(height: defaultPadding),
+           SizedBox(height: defaultPadding),
           AlreadyHaveAnAccountCheck(
             login: false,
             press: () {

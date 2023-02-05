@@ -18,21 +18,26 @@ class LoginscreenView extends GetView<LoginscreenController> {
     return Background(
       child: Responsive(
         mobile:  MobileLoginScreen(),
-        desktop: Row(
+        desktop: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-             Expanded(
-              child: LoginScreenTopImage(),
-            ),
-            Expanded(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children:  [
-                  SizedBox(
-                    width: 450,
-                    child: LoginForm(),
+            Row(
+              children: [
+                 Expanded(
+                  child: LoginScreenTopImage(),
+                ),
+                Expanded(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children:  [
+                      SizedBox(
+                        width: 450,
+                        child: LoginForm(),
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),

@@ -16,25 +16,39 @@ class SignupscreenView extends GetView<SignupscreenController> {
     return Background(
       child: SingleChildScrollView(
         child: Responsive(
-          mobile: const MobileSignupScreen(),
-          desktop: Row(
+          mobile:  MobileSignupScreen(),
+          desktop: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Expanded(
-                child: SignUpScreenTopImage(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.24,
               ),
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    SizedBox(
-                      width: 450,
-                      child: SignUpForm(),
+              Text(
+                "Sign Up".toUpperCase(),
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              // SizedBox(height: defaultPadding),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                   Expanded(
+                    child: SignUpScreenTopImage(),
+                  ),
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children:  [
+                        SizedBox(
+                          width: 450,
+                          child: SignUpForm(),
+                        ),
+                        SizedBox(height: defaultPadding / 2),
+                        // SocalSignUp()
+                      ],
                     ),
-                    SizedBox(height: defaultPadding / 2),
-                    // SocalSignUp()
-                  ],
-                ),
-              )
+                  )
+                ],
+              ),
             ],
           ),
         ),
@@ -54,9 +68,9 @@ class MobileSignupScreen extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        const SignUpScreenTopImage(),
+         SignUpScreenTopImage(),
         Row(
-          children: const [
+          children:  [
             Spacer(),
             Expanded(
               flex: 8,
