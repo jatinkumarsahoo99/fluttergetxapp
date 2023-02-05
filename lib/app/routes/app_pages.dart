@@ -4,8 +4,8 @@ import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/loginscreen/bindings/loginscreen_binding.dart';
 import '../modules/loginscreen/views/loginscreen_view.dart';
-import '../modules/paymentscreen/bindings/paymentscreen_binding.dart';
-import '../modules/paymentscreen/views/paymentscreen_view.dart';
+// import '../modules/paymentscreen/bindings/paymentscreen_binding.dart';
+// import '../modules/paymentscreen/views/paymentscreen_view.dart';
 import '../modules/signupscreen/bindings/signupscreen_binding.dart';
 import '../modules/signupscreen/views/signupscreen_view.dart';
 import '../modules/splashscreen/bindings/splashscreen_binding.dart';
@@ -46,10 +46,6 @@ class AppPages {
       page: () => const WelcomescreenView(),
       binding: WelcomescreenBinding(),
     ),
-    GetPage(
-      name: _Paths.PAYMENTSCREEN,
-      page: () => const PaymentscreenView(),
-      binding: PaymentscreenBinding(),
-    ),
+
   ];
 }
